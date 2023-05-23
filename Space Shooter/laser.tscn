@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://clsgsgkh7qhex"]
+
+[ext_resource type="Script" path="res://Space Shooter/laser.gd" id="1_85q54"]
+[ext_resource type="Texture2D" uid="uid://dv255g54g4nrt" path="res://sprites/PNG/Lasers/laserRed01.png" id="1_xwjmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ul2m"]
+size = Vector2(20, 79)
+
+[node name="Laser" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 4
+gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_85q54")
+
+[node name="LaserRed01" type="Sprite2D" parent="."]
+texture = ExtResource("1_xwjmv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_1ul2m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

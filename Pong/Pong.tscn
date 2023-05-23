@@ -1,0 +1,175 @@
+[gd_scene load_steps=16 format=3 uid="uid://kvv8818gmiuw"]
+
+[ext_resource type="Script" path="res://Pong/PongGame.gd" id="1_vnvwq"]
+[ext_resource type="Script" path="res://Pong/Paddle.gd" id="2_guace"]
+[ext_resource type="Texture2D" uid="uid://y8davgilhcuk" path="res://sprites/paddle.png" id="3_yu7aq"]
+[ext_resource type="PhysicsMaterial" uid="uid://bruqqfo1a6y16" path="res://Pong/PaddleMat.tres" id="4_78w6s"]
+[ext_resource type="Script" path="res://Pong/Ball.gd" id="5_n00mn"]
+[ext_resource type="Texture2D" uid="uid://hovufvnm4ddg" path="res://Pong/icon.svg" id="6_gudvs"]
+[ext_resource type="Script" path="res://Pong/Goal.gd" id="7_652xv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88liu"]
+size = Vector2(64, 130.446)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwcwb"]
+size = Vector2(69, 191)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nblm2"]
+friction = 0.0
+bounce = 1.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nelws"]
+size = Vector2(62.812, 47.1412)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d80q1"]
+size = Vector2(65, 659)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pd0xs"]
+size = Vector2(1150, 40)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7tjs5"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct3n0"]
+size = Vector2(41, 658)
+
+[node name="PongRoot" type="Node2D" node_paths=PackedStringArray("txtp1", "txtp2", "startPoint", "ball")]
+script = ExtResource("1_vnvwq")
+txtp1 = NodePath("txtP1")
+txtp2 = NodePath("txtP2")
+startPoint = NodePath("StartPoint")
+ball = NodePath("Ball")
+
+[node name="PaddleTwo" type="Node2D" parent="."]
+position = Vector2(1056, 242.191)
+scale = Vector2(1, 1.38281)
+script = ExtResource("2_guace")
+speed = 200.0
+
+[node name="pad2" type="Sprite2D" parent="PaddleTwo"]
+position = Vector2(0, 0.22316)
+texture = ExtResource("3_yu7aq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PaddleTwo"]
+physics_material_override = ExtResource("4_78w6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleTwo/StaticBody2D"]
+shape = SubResource("RectangleShape2D_88liu")
+
+[node name="PaddleOne" type="Node2D" parent="."]
+position = Vector2(137, 198)
+
+[node name="pad1" type="Sprite2D" parent="PaddleOne"]
+scale = Vector2(1, 1.46094)
+texture = ExtResource("3_yu7aq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PaddleOne"]
+physics_material_override = ExtResource("4_78w6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleOne/StaticBody2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_mwcwb")
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2(619, 305)
+scale = Vector2(0.723, 1)
+physics_material_override = SubResource("PhysicsMaterial_nblm2")
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("5_n00mn")
+metadata/ball = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+position = Vector2(0.406006, 0.429382)
+shape = SubResource("RectangleShape2D_nelws")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.52, 0.395898)
+texture = ExtResource("6_gudvs")
+
+[node name="GoalOne" type="Area2D" parent="."]
+position = Vector2(61, 0)
+script = ExtResource("7_652xv")
+playerNum = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalOne"]
+position = Vector2(-22.5, 319.5)
+shape = SubResource("RectangleShape2D_d80q1")
+
+[node name="GoalOne2" type="Area2D" parent="."]
+position = Vector2(1128, 5)
+script = ExtResource("7_652xv")
+playerNum = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalOne2"]
+position = Vector2(-22.5, 319.5)
+shape = SubResource("RectangleShape2D_d80q1")
+
+[node name="wall" type="StaticBody2D" parent="."]
+position = Vector2(278, 646)
+physics_material_override = ExtResource("4_78w6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(289, 14)
+shape = SubResource("RectangleShape2D_pd0xs")
+
+[node name="wall3" type="StaticBody2D" parent="."]
+position = Vector2(278, -34)
+physics_material_override = ExtResource("4_78w6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
+position = Vector2(289, 14)
+shape = SubResource("RectangleShape2D_pd0xs")
+
+[node name="wall2" type="StaticBody2D" parent="."]
+position = Vector2(1253, 522)
+physics_material_override = SubResource("PhysicsMaterial_7tjs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
+position = Vector2(-97, -197)
+shape = SubResource("RectangleShape2D_ct3n0")
+
+[node name="wall4" type="StaticBody2D" parent="."]
+position = Vector2(83, 522)
+physics_material_override = SubResource("PhysicsMaterial_7tjs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
+position = Vector2(-97, -197)
+shape = SubResource("RectangleShape2D_ct3n0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 138.0
+offset_top = 29.0
+offset_right = 209.0
+offset_bottom = 55.0
+text = "P1 Score:"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 986.0
+offset_top = 29.0
+offset_right = 1057.0
+offset_bottom = 55.0
+text = "P2 Score:"
+
+[node name="txtP1" type="Label" parent="."]
+offset_left = 221.0
+offset_top = 31.0
+offset_right = 261.0
+offset_bottom = 57.0
+text = "0"
+
+[node name="txtP2" type="Label" parent="."]
+offset_left = 1067.0
+offset_top = 31.0
+offset_right = 1107.0
+offset_bottom = 57.0
+text = "0"
+
+[node name="StartPoint" type="Node2D" parent="."]
+position = Vector2(671, 269)
+
+[connection signal="ballEntered" from="GoalOne" to="." method="_on_goal_one_ball_entered"]
+[connection signal="body_entered" from="GoalOne" to="GoalOne" method="_on_body_entered"]
+[connection signal="ballEntered" from="GoalOne2" to="." method="_on_goal_one_ball_entered"]
+[connection signal="body_entered" from="GoalOne2" to="GoalOne2" method="_on_body_entered"]

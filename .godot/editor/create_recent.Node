@@ -1,0 +1,13 @@
+Node2D
+AudioStreamPlayer2D
+CPUParticles2D
+Timer
+CollisionShape2D
+RigidBody2D
+CharacterBody2D
+Label
+RichTextLabel
+MarginContainer
+StaticBody2D
+Area2D
+Sprite2D
