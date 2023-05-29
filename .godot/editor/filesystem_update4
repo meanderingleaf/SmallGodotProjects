@@ -1,4 +1,3 @@
-res://Space Shooter/SpaceShooterGame.tscn
-res://Space Shooter/enemy.tscn
-res://Space Shooter/laser.tscn
-res://Space Shooter/laser.gd
+res://Attorney/AttorneyGame.tscn
+res://Attorney/AttorneyGame.gd
+res://sprites/assets_refs.txt

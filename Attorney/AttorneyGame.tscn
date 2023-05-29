@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr2kliuopd8yl"]
+
+[ext_resource type="Script" path="res://Attorney/AttorneyGame.gd" id="1_do65a"]
+[ext_resource type="Texture2D" uid="uid://dej0bwndamaoe" path="res://sprites/portraits/FlareMaleHero1.png" id="2_2y87x"]
+[ext_resource type="Texture2D" uid="uid://bc2kq48lvlgc0" path="res://sprites/portraits/FlareFemaleHero2.png" id="3_4m8nt"]
+
+[node name="AttorneyGame" type="Node2D" node_paths=PackedStringArray("txtDialog")]
+script = ExtResource("1_do65a")
+txtDialog = NodePath("GameText")
+charOne = ExtResource("2_2y87x")
+charTwo = ExtResource("3_4m8nt")
+
+[node name="GameText" type="RichTextLabel" parent="."]
+offset_left = 68.0
+offset_top = 476.0
+offset_right = 470.0
+offset_bottom = 522.0
+scale = Vector2(2.5, 3.408)
+text = "Test Dialog"
