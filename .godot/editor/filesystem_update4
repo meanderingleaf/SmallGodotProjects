@@ -1,3 +1,6 @@
 res://Attorney/AttorneyGame.tscn
-res://Attorney/AttorneyGame.gd
-res://sprites/assets_refs.txt
+res://Platformer/PlatformerSet.tres
+res://Platformer/PlatformerGame.tscn
+res://Platformer/Collectible.gd
+res://Platformer/PlatformerGame.gd
+res://Snake/snake.tscn
