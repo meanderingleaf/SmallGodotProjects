@@ -1,17 +1,17 @@
-extends Node2D
-
-@export var txtScore : Node
-var score : int = 0
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-func add_score():
-	score += 1
-	txtScore.text = str(score)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_body_entered(body):
+	#thats a game over
+	$"/root/snake".game_over()
+	pass # Replace with function body.

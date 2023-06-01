@@ -4,3 +4,12 @@ res://Platformer/PlatformerGame.tscn
 res://Platformer/Collectible.gd
 res://Platformer/PlatformerGame.gd
 res://Snake/snake.tscn
+res://Snake/SnakePlayer.gd
+res://Snake/SnakeFruit.gd
+res://Snake/snake_bit.tscn
+res://Snake/SnakeBit.gd
+res://Snake/SnakeGame.gd
+res://Matching/Matching.tscn
+res://Matching/Card.gd
+res://Matching/MatchingGame.gd
+res://Matching/card.tscn

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddxee4gprhmyv"]
+
+[ext_resource type="Script" path="res://Snake/SnakeBit.gd" id="1_vlom7"]
+[ext_resource type="Texture2D" uid="uid://1nbl1xwf3pqd" path="res://sprites/boardgame/Pieces (Yellow)/pieceYellow_border10.png" id="2_setfu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tr0ga"]
+size = Vector2(12, 10)
+
+[node name="SnakeBit" type="Area2D"]
+script = ExtResource("1_vlom7")
+
+[node name="PieceYellowBorder11" type="Sprite2D" parent="."]
+texture = ExtResource("2_setfu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tr0ga")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

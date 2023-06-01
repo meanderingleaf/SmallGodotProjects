@@ -15,11 +15,6 @@ run/main_scene="res://Pong/Pong.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://Pong/icon.svg"
 
-[display]
-
-window/stretch/mode="viewport"
-window/stretch/scale=3.0
-
 [input]
 
 up={
@@ -51,6 +46,10 @@ click={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
 ]
+}
+Horizontal={
+"deadzone": 0.5,
+"events": []
 }
 
 [rendering]

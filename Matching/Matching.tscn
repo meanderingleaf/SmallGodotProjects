@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjjmoyuh4f5wm"]
+
+[ext_resource type="Script" path="res://Matching/MatchingGame.gd" id="1_r5jiy"]
+[ext_resource type="PackedScene" uid="uid://ck3ppbro06w4d" path="res://Matching/card.tscn" id="2_1diwq"]
+
+[node name="Matching" type="Node2D"]
+script = ExtResource("1_r5jiy")
+cardResource = ExtResource("2_1diwq")
+
+[node name="Card" parent="." instance=ExtResource("2_1diwq")]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

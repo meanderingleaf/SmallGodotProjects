@@ -1,18 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx44agugon732"]
+[gd_scene load_steps=7 format=3 uid="uid://cx44agugon732"]
 
 [ext_resource type="Texture2D" uid="uid://1nbl1xwf3pqd" path="res://sprites/boardgame/Pieces (Yellow)/pieceYellow_border10.png" id="1_2vg1n"]
+[ext_resource type="Script" path="res://Snake/SnakeGame.gd" id="1_in12c"]
 [ext_resource type="Script" path="res://Snake/SnakePlayer.gd" id="1_pd1pi"]
+[ext_resource type="PackedScene" uid="uid://d3kq5o0ei4440" path="res://Snake/snake_fruit.tscn" id="2_ma2uc"]
+[ext_resource type="PackedScene" uid="uid://ddxee4gprhmyv" path="res://Snake/snake_bit.tscn" id="6_3gdii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63l8q"]
 
 [node name="snake" type="Node2D"]
+script = ExtResource("1_in12c")
+fruitResource = ExtResource("2_ma2uc")
+
+[node name="SnakeFruit" parent="." instance=ExtResource("2_ma2uc")]
 
 [node name="SnakePlayer" type="CharacterBody2D" parent="."]
+motion_mode = 1
 script = ExtResource("1_pd1pi")
+snakeBitResource = ExtResource("6_3gdii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SnakePlayer"]
 shape = SubResource("RectangleShape2D_63l8q")
 
 [node name="PieceYellowBorder10" type="Sprite2D" parent="SnakePlayer"]
-position = Vector2(58, 98)
 texture = ExtResource("1_2vg1n")
