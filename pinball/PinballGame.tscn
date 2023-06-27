@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c435i13nre4lw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlmrf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cg2oe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ee3ua"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kwgok"]
+
+[node name="PinballGame" type="Node3D"]
+
+[node name="Table" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table"]
+shape = SubResource("BoxShape3D_mlmrf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.38126, 0, 0, 0, 0.162195, 0, 0, 0, 3.59016, 0, 0, 0)
+mesh = SubResource("BoxMesh_cg2oe")
+surface_material_override/0 = SubResource("StandardMaterial3D_ee3ua")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.792864, 0.609398, 0, -0.609398, 0.792864, 0, 1.53285, 3.10995)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.215819, 0.976433, 0, -0.976433, 0.215819, 0, 2.72587, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1.38126, 0, 0, 0, 0.162195, 0, 0, 0, 3.59016, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_kwgok")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1.38126, 0, 0, 0, 0.162195, 0, 0, 0, 3.59016, 0, 0, 0)
