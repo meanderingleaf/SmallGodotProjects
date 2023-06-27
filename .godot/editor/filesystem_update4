@@ -1,3 +1,5 @@
-res://pinball/PinballGame.tscn
+res://Labs/1/birdot.tscn
 res://Matching/Matching.tscn
 res://Matching/card.tscn
+res://pinball/PinballGame.tscn
+res://Labs/1/scripts/BirdScript.gd

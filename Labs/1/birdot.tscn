@@ -1,3 +1,39 @@
-[gd_scene format=3 uid="uid://ckurek13whkjd"]
+[gd_scene load_steps=6 format=3 uid="uid://ckurek13whkjd"]
+
+[ext_resource type="Texture2D" uid="uid://bqi3w88nc54x" path="res://Labs/1/assets/bird.png" id="1_md4ru"]
+[ext_resource type="Texture2D" uid="uid://bldgpqykt7amm" path="res://Labs/1/assets/boulder.png" id="2_0n58p"]
+[ext_resource type="Script" path="res://Labs/1/scripts/BirdScript.gd" id="2_jywco"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j0wyq"]
+radius = 29.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6dnf7"]
+radius = 42.0119
 
 [node name="birdot" type="Node2D"]
+
+[node name="Bird" type="RigidBody2D" parent="."]
+position = Vector2(117, 206)
+gravity_scale = 0.0
+script = ExtResource("2_jywco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bird"]
+shape = SubResource("CircleShape2D_j0wyq")
+
+[node name="Bird" type="Sprite2D" parent="Bird/CollisionShape2D"]
+position = Vector2(1.12499, -0.875004)
+scale = Vector2(0.10498, 0.10498)
+texture = ExtResource("1_md4ru")
+
+[node name="Asteroid" type="RigidBody2D" parent="."]
+position = Vector2(310, 132)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asteroid"]
+position = Vector2(-6, 1)
+shape = SubResource("CircleShape2D_6dnf7")
+
+[node name="Boulder" type="Sprite2D" parent="Asteroid"]
+position = Vector2(-8, 0)
+scale = Vector2(0.174805, 0.174805)
+texture = ExtResource("2_0n58p")
