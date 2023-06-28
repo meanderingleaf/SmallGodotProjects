@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2h2d56s8lavu"]
+
+[ext_resource type="Texture2D" uid="uid://ddwue5o6746rs" path="res://Labs/5/assets/tile_0003.png" id="1_6fhlo"]
+[ext_resource type="Script" path="res://Labs/5/assets/InfiniteRunnerGround.gd" id="1_xv24h"]
+[ext_resource type="Texture2D" uid="uid://dnl4fdockw1ap" path="res://Labs/5/assets/tile_0004.png" id="2_yk5au"]
+[ext_resource type="Texture2D" uid="uid://bixi5pdvkjods" path="res://Labs/5/assets/tile_0005.png" id="3_21de8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1y5x"]
+size = Vector2(85.3333, 18)
+
+[node name="Ground" type="StaticBody2D"]
+position = Vector2(623, 474)
+scale = Vector2(3, 3)
+script = ExtResource("1_xv24h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(38.3333, 8.33334)
+shape = SubResource("RectangleShape2D_p1y5x")
+
+[node name="Tile0003" type="Sprite2D" parent="."]
+position = Vector2(6.33334, 7.00003)
+texture = ExtResource("1_6fhlo")
+
+[node name="Tile0004" type="Sprite2D" parent="."]
+position = Vector2(22, 7.00003)
+texture = ExtResource("2_yk5au")
+
+[node name="Tile0006" type="Sprite2D" parent="."]
+position = Vector2(38, 7)
+texture = ExtResource("2_yk5au")
+
+[node name="Tile0007" type="Sprite2D" parent="."]
+position = Vector2(54, 7)
+texture = ExtResource("2_yk5au")
+
+[node name="Tile0005" type="Sprite2D" parent="."]
+position = Vector2(70, 7)
+texture = ExtResource("3_21de8")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

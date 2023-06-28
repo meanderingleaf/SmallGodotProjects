@@ -1,3 +1,4 @@
+SpriteFrames
 Resource
 TileSet
 PhysicsMaterial

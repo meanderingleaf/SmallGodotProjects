@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj78e2qx4b70t"]
+
+[ext_resource type="SpriteFrames" uid="uid://ds75khi4xwofw" path="res://Labs/5/assets/infinitePlayerRun.tres" id="1_7y4gq"]
+[ext_resource type="Script" path="res://Labs/5/InfinitePlayer.gd" id="1_fx62e"]
+[ext_resource type="PackedScene" uid="uid://b2h2d56s8lavu" path="res://Labs/5/assets/RunnerGround.tscn" id="1_r2bri"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k31la"]
+
+[node name="runner" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_r2bri")]
+position = Vector2(287, 474)
+
+[node name="Ground2" parent="." instance=ExtResource("1_r2bri")]
+position = Vector2(695, 474)
+
+[node name="Ground3" parent="." instance=ExtResource("1_r2bri")]
+position = Vector2(1087, 474)
+
+[node name="Ground4" parent="." instance=ExtResource("1_r2bri")]
+position = Vector2(1435, 474)
+
+[node name="Ground5" parent="." instance=ExtResource("1_r2bri")]
+position = Vector2(1780, 474)
+
+[node name="InfinitePlayer" type="CharacterBody2D" parent="."]
+position = Vector2(257, 357)
+scale = Vector2(3, 3)
+script = ExtResource("1_fx62e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfinitePlayer"]
+shape = SubResource("CapsuleShape2D_k31la")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InfinitePlayer"]
+texture_filter = 1
+position = Vector2(0, -2)
+scale = Vector2(1.6875, 1.6875)
+sprite_frames = ExtResource("1_7y4gq")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="InfinitePlayer"]
+position = Vector2(0, 1)
+scale = Vector2(0.333333, 0.333333)

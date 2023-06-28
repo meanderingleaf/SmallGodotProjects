@@ -1,4 +1,10 @@
+VisibleOnScreenNotifier2D
+Camera2D
 CollisionShape2D
+StaticBody2D
+AnimatedSprite2D
+CharacterBody2D
+Node2D
 RigidBody2D
 Area3D
 CollisionShape3D
@@ -12,15 +18,11 @@ AudioStreamPlayer2D
 Timer
 Area2D
 Sprite2D
-CharacterBody2D
 Label
 CanvasLayer
-Camera2D
 TileMap
 AnimationTree
 AnimationPlayer
 RichTextLabel
-Node2D
 CPUParticles2D
 MarginContainer
-StaticBody2D
