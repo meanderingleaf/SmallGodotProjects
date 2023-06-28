@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bhykx2o04nrd2"]
+
+[node name="pong" type="Node2D"]
