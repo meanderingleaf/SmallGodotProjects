@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://dajgr4ameyy20"]
+
+[ext_resource type="Texture2D" uid="uid://cw888bxnbi1e7" path="res://sprites/PNG/playerShip3_green.png" id="1_5eocm"]
+[ext_resource type="Script" path="res://Space Shooter/SpacePlayer.gd" id="2_at81e"]
+[ext_resource type="Script" path="res://Space Shooter/EnemySpawner.gd" id="3_lx5xx"]
+[ext_resource type="PackedScene" uid="uid://dbi7op54tc3g7" path="res://Space Shooter/poof.tscn" id="4_ac6i2"]
+[ext_resource type="AudioStream" uid="uid://bl6wg3eykplrg" path="res://sounds/Audio/explosionCrunch_001.ogg" id="5_37bco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8pjx"]
+size = Vector2(77, 79)
+
+[node name="SpaceShooterGame" type="Node2D"]
+position = Vector2(0, 1)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(571, 490)
+collision_mask = 4
+motion_mode = 1
+script = ExtResource("2_at81e")
+
+[node name="img" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_5eocm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-2.5, 2.5)
+shape = SubResource("RectangleShape2D_q8pjx")
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = ExtResource("3_lx5xx")
+
+[node name="Timer" type="Timer" parent="EnemySpawner"]
+autostart = true
+
+[node name="Poof" parent="." instance=ExtResource("4_ac6i2")]
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("5_37bco")
+
+[connection signal="timeout" from="EnemySpawner/Timer" to="EnemySpawner" method="_on_timer_timeout"]

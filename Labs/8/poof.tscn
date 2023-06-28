@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbi7op54tc3g7"]
+
+[ext_resource type="Texture2D" uid="uid://by48286mna4h0" path="res://sprites/PNG/Effects/star1.png" id="1_6itee"]
+
+[sub_resource type="Gradient" id="Gradient_masv7"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.517647, 0, 1)
+
+[node name="Poof" type="Node2D"]
+position = Vector2(234, 156)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 34
+lifetime = 0.5
+one_shot = true
+texture = ExtResource("1_6itee")
+emission_shape = 1
+emission_sphere_radius = 3.38
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 150.0
+color_ramp = SubResource("Gradient_masv7")
