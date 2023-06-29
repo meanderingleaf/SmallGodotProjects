@@ -3,7 +3,7 @@
 ::res://Attorney/::1687894706
 AttorneyGame.gd::GDScript::-1::1687894706::0::1::::<>Node2D<>::
 AttorneyGame.tscn::PackedScene::6022417173992172423::1687894706::0::1::::<><>::res://Attorney/AttorneyGame.gd<>uid://dej0bwndamaoe<>uid://bc2kq48lvlgc0
-::res://Labs/::1688040930
+::res://Labs/::1688046020
 ::res://Labs/1/::1687975632
 birdot.tscn::PackedScene::5517057257600665461::1687975632::0::1::::<><>::uid://bqi3w88nc54x<>uid://bldgpqykt7amm<>res://Labs/1/scripts/BirdScript.gd
 ::res://Labs/1/assets/::1687899070
@@ -246,11 +246,11 @@ poof.tscn::PackedScene::7247934697170522684::1687894706::0::1::::<><>::uid://by4
 SpacePlayer.gd::GDScript::-1::1687894706::0::1::::<>CharacterBody2D<>::
 SpaceShooterGame.tscn::PackedScene::7178237635047519759::1687894706::0::1::::<><>::uid://cw888bxnbi1e7<>res://Space Shooter/SpacePlayer.gd<>res://Space Shooter/EnemySpawner.gd<>uid://dbi7op54tc3g7<>uid://bl6wg3eykplrg
 ::res://Labs/9/::1688045365
+BomberEnemySpawner.gd::GDScript::-1::1688045364::0::1::::<>Timer<>::
 BomberGame.tscn::PackedScene::2244656259046279657::1688045365::0::1::::<><>::uid://mn2ire5rj65<>res://Labs/9/BomberEnemySpawner.gd<>uid://7cxxxo0ctvig
 BomberPlayer.gd::GDScript::-1::1688044475::0::1::::<>CharacterBody2D<>::
-bomber_player.tscn::PackedScene::25610517061101192::1688044250::0::1::::<><>::res://Labs/9/BomberPlayer.gd<>uid://bvge87g5w5oq7
-BomberEnemySpawner.gd::GDScript::-1::1688045364::0::1::::<>Timer<>::
 bomber_enemy.tscn::PackedScene::2251610546822241858::1688044901::0::1::::<><>::uid://nttw14iiv7ej
+bomber_player.tscn::PackedScene::25610517061101192::1688044250::0::1::::<><>::res://Labs/9/BomberPlayer.gd<>uid://bvge87g5w5oq7
 ::res://Labs/9/assets/::1688043600
 bomber_tile_set.tres::TileSet::2452866219074651097::1688042820::0::1::::<><>::uid://brdqa3bqtvut
 bomb_texture.tres::AtlasTexture::2510509093526514776::1688043600::0::1::::<><>::uid://brdqa3bqtvut
@@ -258,6 +258,8 @@ enemy_texture.tres::AtlasTexture::952872465731495673::1688043346::0::1::::<><>::
 plane_texture.tres::AtlasTexture::3873076157195756296::1688042820::0::1::::<><>::uid://etj71lusuqhg
 ships.png::CompressedTexture2D::320583533752639796::1688041330::1688041331::1::::<><>::
 tiles.png::CompressedTexture2D::105494032459938503::1688041315::1688041327::1::::<><>::
+::res://Labs/10/::1688046031
+dialogProject.tscn::PackedScene::8039933657764414414::1688046031::0::1::::<><>::
 ::res://Matching/::1687975631
 Card.gd::GDScript::-1::1687894706::0::1::::<>Area2D<>::
 card.tscn::PackedScene::5533470002136044477::1687975631::0::1::::<><>::res://Matching/Card.gd<>uid://qhooo7uwncdk<>uid://c3a72nvflupnn
