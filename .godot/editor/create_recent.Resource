@@ -1,4 +1,6 @@
+AtlasTexture
+TileSet
+TileSetAtlasSource
 SpriteFrames
 Resource
-TileSet
 PhysicsMaterial

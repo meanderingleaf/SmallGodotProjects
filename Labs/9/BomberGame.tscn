@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://68lfpxyqtnob"]
+
+[ext_resource type="PackedScene" uid="uid://mn2ire5rj65" path="res://Labs/9/bomber_player.tscn" id="1_d3a5b"]
+[ext_resource type="Script" path="res://Labs/9/BomberEnemySpawner.gd" id="2_q5pty"]
+[ext_resource type="PackedScene" uid="uid://7cxxxo0ctvig" path="res://Labs/9/bomber_enemy.tscn" id="3_wjjra"]
+
+[node name="BomberGame" type="Node2D"]
+
+[node name="BomberPlayer" parent="." instance=ExtResource("1_d3a5b")]
+position = Vector2(364, 341)
+
+[node name="EnemySpawner" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+script = ExtResource("2_q5pty")
+enemyToSpawn = ExtResource("3_wjjra")
+
+[connection signal="timeout" from="EnemySpawner" to="EnemySpawner" method="_on_timeout"]

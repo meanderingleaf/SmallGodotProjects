@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://7cxxxo0ctvig"]
+
+[ext_resource type="Texture2D" uid="uid://nttw14iiv7ej" path="res://Labs/9/assets/enemy_texture.tres" id="1_y0o4r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0gbg"]
+radius = 38.3275
+
+[node name="BomberEnemy" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d0gbg")
+
+[node name="EnemyTexture" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_y0o4r")
