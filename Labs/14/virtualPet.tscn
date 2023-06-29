@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3klx88g5ohuk"]
+
+[ext_resource type="Texture2D" uid="uid://djp8iplferrx3" path="res://Labs/14/assets/fishTile_038.png" id="1_ilgaq"]
+[ext_resource type="Texture2D" uid="uid://b56pjmfxnt7kl" path="res://Labs/14/assets/fishTile_031.png" id="1_isjha"]
+[ext_resource type="Texture2D" uid="uid://blkftdaeok6pm" path="res://Labs/14/assets/fishTile_039.png" id="2_pr65a"]
+[ext_resource type="Texture2D" uid="uid://dibhiyiaikcql" path="res://Labs/14/assets/fishTile_032.png" id="2_teu2g"]
+[ext_resource type="Texture2D" uid="uid://dimhfx4lvsbo8" path="res://Labs/14/assets/fishTile_042.png" id="3_gyeni"]
+[ext_resource type="Texture2D" uid="uid://cuhiu5lg8x3o0" path="res://Labs/14/assets/fishTile_034.png" id="3_o0imp"]
+[ext_resource type="Texture2D" uid="uid://8fg66umc2sfo" path="res://Labs/14/assets/fishTile_041.png" id="4_um1jw"]
+[ext_resource type="Texture2D" uid="uid://dxjyga6pknyhx" path="res://Labs/14/assets/fishTile_078.png" id="8_byadr"]
+
+[node name="virtualPet" type="Node2D"]
+
+[node name="FishTile031" type="Sprite2D" parent="."]
+position = Vector2(90, 506)
+scale = Vector2(2.16302, 2.16302)
+texture = ExtResource("1_isjha")
+
+[node name="FishTile032" type="Sprite2D" parent="."]
+position = Vector2(341, 534)
+scale = Vector2(2.1446, 2.1446)
+texture = ExtResource("2_teu2g")
+
+[node name="FishTile033" type="Sprite2D" parent="."]
+position = Vector2(935, 534)
+scale = Vector2(2.1446, 2.1446)
+texture = ExtResource("2_teu2g")
+
+[node name="FishTile034" type="Sprite2D" parent="."]
+position = Vector2(569, 474)
+scale = Vector2(3.64504, 3.64504)
+texture = ExtResource("3_o0imp")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="FishTile038" type="Sprite2D" parent="World"]
+position = Vector2(42, 609)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_ilgaq")
+
+[node name="FishTile039" type="Sprite2D" parent="World"]
+position = Vector2(130.8, 607.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_pr65a")
+
+[node name="FishTile042" type="Sprite2D" parent="World"]
+position = Vector2(216.8, 606.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_gyeni")
+
+[node name="FishTile041" type="Sprite2D" parent="World"]
+position = Vector2(305.8, 607.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_um1jw")
+
+[node name="FishTile040" type="Sprite2D" parent="World"]
+position = Vector2(394.8, 606.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_ilgaq")
+
+[node name="FishTile043" type="Sprite2D" parent="World"]
+position = Vector2(484.8, 605.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_pr65a")
+
+[node name="FishTile044" type="Sprite2D" parent="World"]
+position = Vector2(574.8, 603.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_gyeni")
+
+[node name="FishTile045" type="Sprite2D" parent="World"]
+position = Vector2(663.8, 606.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_um1jw")
+
+[node name="FishTile046" type="Sprite2D" parent="World"]
+position = Vector2(753.8, 605.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_ilgaq")
+
+[node name="FishTile047" type="Sprite2D" parent="World"]
+position = Vector2(842.8, 606.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_pr65a")
+
+[node name="FishTile048" type="Sprite2D" parent="World"]
+position = Vector2(930.8, 605.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_gyeni")
+
+[node name="FishTile049" type="Sprite2D" parent="World"]
+position = Vector2(1020.8, 609.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_um1jw")
+
+[node name="FishTile050" type="Sprite2D" parent="World"]
+position = Vector2(1109.8, 608.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_ilgaq")
+
+[node name="FishTile051" type="Sprite2D" parent="World"]
+position = Vector2(1195.8, 608.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_pr65a")
+
+[node name="FishTile052" type="Sprite2D" parent="World"]
+position = Vector2(1260.8, 608.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_gyeni")
+
+[node name="FishTile053" type="Sprite2D" parent="World"]
+position = Vector2(1324.8, 608.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_um1jw")
+
+[node name="FishTile078" type="Sprite2D" parent="."]
+position = Vector2(348, 245)
+scale = Vector2(2.25914, 2.25914)
+texture = ExtResource("8_byadr")

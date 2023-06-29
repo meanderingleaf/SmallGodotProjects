@@ -1,3 +1,4 @@
+Node2D
 Node3D
 DirectionalLight3D
 Camera3D
@@ -11,7 +12,6 @@ VisibleOnScreenNotifier2D
 Camera2D
 StaticBody2D
 AnimatedSprite2D
-Node2D
 Area3D
 StaticBody3D
 RigidBody3D
