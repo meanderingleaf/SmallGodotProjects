@@ -1,14 +1,1 @@
-res://Labs/7/adventureGame.tscn
-res://Platformer/PlatformerSet.tres
-res://Labs/9/assets/plane_texture.tres
-res://Labs/9/assets/bomber_tile_set.tres
-res://Labs/9/assets/enemy_texture.tres
-res://Labs/9/assets/bomb_texture.tres
-res://Labs/9/BomberGame.tscn
-res://Labs/9/BomberPlayer.gd
-res://Labs/5/runner.tscn
-res://Labs/5/assets/RunnerGround.tscn
-res://Platformer/PlatformerGame.tscn
-res://Labs/9/bomber_player.tscn
-res://Labs/9/BomberEnemySpawner.gd
-res://Labs/11/pinballStarter.tscn
+res://Labs/12/walkingSim.tscn

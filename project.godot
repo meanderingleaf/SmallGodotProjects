@@ -15,6 +15,10 @@ run/main_scene="res://Pong/Pong.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://Pong/icon.svg"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 up={
