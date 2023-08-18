@@ -1,2 +1,15 @@
+<<<<<<< Updated upstream
 res://Labs/12/walkingSim.tscn
 res://Labs/14/virtualPet.tscn
+=======
+res://Tamagotchi/PetGame.tscn
+res://Platformer/PlatformerSet.tres
+res://Tamagotchi/PetState.gd
+res://Tamagotchi/PlayState.gd
+res://Tamagotchi/BoredState.gd
+res://Tamagotchi/Pet.gd
+res://Platformer/PlatformerGame.tscn
+res://badCardGame/badCardGame.tscn
+res://Dialog/DialogScene.tscn
+res://pinball/PinballGame.tscn
+>>>>>>> Stashed changes

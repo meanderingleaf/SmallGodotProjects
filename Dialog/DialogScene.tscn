@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://7a4lww47w0rx"]
+
+[ext_resource type="Script" path="res://Dialog/DialogScene.gd" id="1_m5j0w"]
+
+[node name="DialogScene" type="Node2D" node_paths=PackedStringArray("txtShow", "container", "btnNext")]
+script = ExtResource("1_m5j0w")
+txtShow = NodePath("Control/Label")
+container = NodePath("Control/HBoxContainer")
+btnNext = NodePath("Control/Button")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 107.0
+offset_right = 94.0
+offset_bottom = 147.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 81.0
+offset_right = 261.0
+offset_bottom = 112.0
+text = "NEXT"

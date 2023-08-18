@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm8vtxrfqbo0y"]
+
+[ext_resource type="Script" path="res://Tamagotchi/Pet.gd" id="1_48ibh"]
+[ext_resource type="Texture2D" uid="uid://dbg6xgms8sg2j" path="res://sprites/platformer/character_0000.png" id="1_rw51w"]
+[ext_resource type="Texture2D" uid="uid://dyrc62ujiskst" path="res://sprites/boardgame/Pieces (Purple)/piecePurple_border11.png" id="3_50rcj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2jtr"]
+radius = 27.2947
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1sh0w"]
+vertices = PackedVector2Array(10, 20, 528, 29, 949, 97, 1085, 385, 796, 609, 114, 600, -59, 466, -59, 133)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(10, 20, 528, 29, 949, 97, 1085, 385, 796, 609, 114, 600, -59, 466, -59, 133)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fpotw"]
+radius = 32.0
+
+[node name="PetGame" type="Node2D"]
+
+[node name="Pet" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_48ibh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pet"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_r2jtr")
+
+[node name="Character0000" type="Sprite2D" parent="Pet"]
+texture_filter = 1
+position = Vector2(2, 1)
+texture = ExtResource("1_rw51w")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Pet"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_1sh0w")
+
+[node name="Ball" type="RigidBody2D" parent="." groups=["ball"]]
+position = Vector2(422, 255)
+mass = 0.3
+gravity_scale = 0.0
+linear_damp = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_fpotw")
+
+[node name="PiecePurpleBorder11" type="Sprite2D" parent="Ball"]
+position = Vector2(-1, -2)
+texture = ExtResource("3_50rcj")

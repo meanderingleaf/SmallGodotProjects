@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c435i13nre4lw"]
+[gd_scene load_steps=6 format=3 uid="uid://c435i13nre4lw"]
+
+[ext_resource type="Script" path="res://pinball/WaaDeleteMe.gd" id="1_cvr7q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mlmrf"]
 
@@ -30,6 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 0.215819, 0.976433, 0, -0.976433, 0.215819, 
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1.38126, 0, 0, 0, 0.162195, 0, 0, 0, 3.59016, 0, 0, 0)
+script = ExtResource("1_cvr7q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_kwgok")

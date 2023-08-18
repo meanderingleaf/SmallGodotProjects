@@ -1,5 +1,24 @@
+<<<<<<< Updated upstream
 Node2D
 Node3D
+=======
+CollisionShape2D
+RigidBody2D
+NavigationRegion2D
+NavigationAgent2D
+CharacterBody2D
+Button
+HBoxContainer
+Label
+Control
+Container
+TextureRect
+CanvasLayer
+Area3D
+CollisionShape3D
+CharacterBody3D
+StaticBody3D
+>>>>>>> Stashed changes
 DirectionalLight3D
 Camera3D
 CollisionShape3D
@@ -19,8 +38,12 @@ MeshInstance3D
 AudioStreamPlayer2D
 Area2D
 Sprite2D
+<<<<<<< Updated upstream
 Label
 CanvasLayer
+=======
+Camera2D
+>>>>>>> Stashed changes
 TileMap
 AnimationTree
 AnimationPlayer

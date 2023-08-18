@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://rxpf5wv2vp1o"]
+
+[ext_resource type="Script" path="res://badCardGame/BaseCardController.gd" id="1_rtvl8"]
+[ext_resource type="Texture2D" uid="uid://cbbm5nv6au81k" path="res://sprites/boardgame/Cards/cardBack_green1.png" id="1_vw657"]
+[ext_resource type="Script" path="res://badCardGame/BCCard.gd" id="2_k6k8i"]
+
+[node name="badCardGame" type="Node2D"]
+script = ExtResource("1_rtvl8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 74.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Carrd" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_vw657")
+script = ExtResource("2_k6k8i")
+
+[node name="Carrd2" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_vw657")
+
+[node name="Carrd3" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_vw657")
+
+[connection signal="gui_input" from="CanvasLayer/Control/HBoxContainer/Carrd" to="CanvasLayer/Control/HBoxContainer/Carrd" method="_on_gui_input"]
