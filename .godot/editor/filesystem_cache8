@@ -1,5 +1,5 @@
-2a60927148abd1d33b818b535e306557
-::res://::1688049737
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1692382044
 ::res://Attorney/::1687894706
 AttorneyGame.gd::GDScript::-1::1687894706::0::1::::<>Node2D<>::
 AttorneyGame.tscn::PackedScene::6022417173992172423::1687894706::0::1::::<><>::res://Attorney/AttorneyGame.gd<>uid://dej0bwndamaoe<>uid://bc2kq48lvlgc0
@@ -263,7 +263,7 @@ dialogProject.tscn::PackedScene::8039933657764414414::1688046031::0::1::::<><>::
 ::res://Labs/11/::1688046278
 pinballStarter.tscn::PackedScene::2923049968563455770::1688046278::0::1::::<><>::
 ::res://Labs/12/::1688058600
-walkingSim.tscn::PackedScene::1114741426392341534::1688058600::0::1::::<><>::uid://dy7mq71ubeecu<>uid://0cs2w62j50dx<>uid://co3u1iio4cpj<>uid://bcmw8ouol0fuv<>uid://bcmw8ouol0fuv<>uid://dlptr4ty8l400
+walkingSim.tscn::PackedScene::1114741426392341534::1688058600::0::1::::<><>::uid://dy7mq71ubeecu::::res://Labs/12/assets/roofMetal_poles.glb<>uid://0cs2w62j50dx::::res://Labs/12/assets/detailDumpster_open.glb<>uid://co3u1iio4cpj::::res://Labs/12/assets/grass.glb<>uid://bcmw8ouol0fuv::::res://Labs/12/assets/tree_large.glb<>uid://bcmw8ouol0fuv::::res://Labs/12/assets/truck_green.glb<>uid://dlptr4ty8l400::::res://Labs/12/assets/wall_typeA.glb
 ::res://Labs/12/assets/::1688050321
 detailDumpster_open.glb::PackedScene::1759992173406789377::1688050003::1688050025::1::::<><>::uid://c1l757ld6vwvr<>uid://csboh1y0cgba1<>uid://bu674hlbt5wme<>uid://c61xgwj4gri2j
 detailDumpster_open_dirt.png::CompressedTexture2D::3856188383349700980::1688050005::1688050007::1::::<><>::
@@ -298,9 +298,9 @@ wall_typeA_concrete.png::CompressedTexture2D::8118380367349765708::1688050280::1
 wall_typeA_wall_lines.png::CompressedTexture2D::6096535257058747265::1688050279::1688050280::1::::<><>::
 ::res://Labs/13/::1688058825
 pushingPuzzle.tscn::PackedScene::6565310383089118678::1688058825::0::1::::<><>::
-::res://Labs/14/::1688058987
-virtualPet.tscn::PackedScene::9145904195227413534::1688058979::0::1::::<><>::
-::res://Labs/14/assets/::1688060682
+::res://Labs/14/::1688061092
+virtualPet.tscn::PackedScene::9145904195227413534::1688061092::0::1::::<><>::uid://djp8iplferrx3::::res://Labs/14/assets/fishTile_038.png<>uid://b56pjmfxnt7kl::::res://Labs/14/assets/fishTile_031.png<>uid://blkftdaeok6pm::::res://Labs/14/assets/fishTile_039.png<>uid://dibhiyiaikcql::::res://Labs/14/assets/fishTile_032.png<>uid://dimhfx4lvsbo8::::res://Labs/14/assets/fishTile_042.png<>uid://cuhiu5lg8x3o0::::res://Labs/14/assets/fishTile_034.png<>uid://8fg66umc2sfo::::res://Labs/14/assets/fishTile_041.png<>uid://dxjyga6pknyhx::::res://Labs/14/assets/fishTile_078.png
+::res://Labs/14/assets/::1688060684
 fishTile_031.png::CompressedTexture2D::4557009169313961703::1688060672::1688060673::1::::<><>::
 fishTile_032.png::CompressedTexture2D::7723277756168151811::1688060672::1688060673::1::::<><>::
 fishTile_033.png::CompressedTexture2D::1577456707897199847::1688060672::1688060673::1::::<><>::
